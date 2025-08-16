@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aryan Dangi — Machine Learning Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <!-- Base styles then theme -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/theme.pro.css" />
+  <link rel="stylesheet" href="css/terrain.theme.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+
+  <button id="theme-toggle">
+    <svg id="theme-toggle-sun" class="hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+    </svg>
+    <svg id="theme-toggle-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+    </svg>
+  </button>
+
+  <div class="noise"></div>
+
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-text">AD</div>
+      <div class="loader-progress"><div class="loader-progress-bar"></div></div>
+    </div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <nav id="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">AD</a>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Where all components will be injected after they’re fetched -->
+  <main id="main-content"></main>
+
+  <!-- No component.js scripts. No file-mode shim. We load pure HTML via main.js -->
+
+  <!-- App logic -->
+  <script src="js/main.js" defer></script>
+  <!-- Terrain background & theme toggle -->
+  <script src="js/terrain_bg.js" defer></script>
+</body>
+</html>

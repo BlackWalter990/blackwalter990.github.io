@@ -1,0 +1,102 @@
+/* css/theme.pro.css — Neo Professional theme (scoped) */
+  
+  .hero.hero--pro{
+    position: relative;
+    padding: clamp(80px, 10vw, 140px) 0 clamp(80px, 8vw, 120px);
+    overflow: hidden;
+  }
+  .hero--pro .hero-shell{
+    position: relative;
+    z-index: 2;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .hero--pro .badge{
+    display:inline-block;
+    padding:6px 10px;
+    border:1px solid var(--border);
+    border-radius:999px;
+    font-size:.8rem;
+    letter-spacing:.12em;
+    color:var(--muted);
+    background: color-mix(in srgb, var(--panel) 60%, transparent);
+  }
+  .hero--pro .meta{
+    margin-left:12px;
+    font-size:.85rem;
+    color:var(--muted);
+    opacity:.9;
+  }
+  .hero--pro .hero-title{
+    font-size: clamp(42px, 8vw, 88px);
+    line-height: 1.02;
+    margin: 14px 0 6px;
+    position: relative;
+  }
+  .hero--pro .gradient-text{
+    background: linear-gradient(100deg, #d9e7ff 0%, #ffffff 30%, #e3ecff 55%, #f2f6ff 70%, #d9e7ff 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    background-size: 200% 100%;
+    animation: heroHue 7.5s ease-in-out infinite;
+    filter: drop-shadow(0 8px 26px rgba(122,162,255,.10));
+  }
+  @keyframes heroHue { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+  .hero--pro .name-underline{
+    position:absolute; left:0; bottom:-12px; width:0%; height:2px; border-radius:2px;
+    background: linear-gradient(90deg, rgba(122,162,255,0), rgba(122,162,255,.9), rgba(122,162,255,0));
+    box-shadow: 0 0 18px rgba(122,162,255,.35);
+    animation: underlineSweep 1.2s ease 1.1s forwards;
+  }
+  @keyframes underlineSweep { from{width:0%;opacity:.0} to{width:58%;opacity:1} }
+  
+  .hero--pro .hero-lede{
+    color: var(--muted);
+    font-size: clamp(16px, 2.2vw, 20px);
+    max-width: 760px;
+    margin: 16px 0 28px;
+  }
+  .hero--pro .hero-cta .btn{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    color:var(--text);
+    text-decoration:none;
+    margin-right:10px;
+    transition: transform .15s ease, background .2s, border-color .2s;
+  }
+  .hero--pro .btn-primary{
+    background: color-mix(in srgb, var(--accent) 20%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  }
+  .hero--pro .btn-secondary{
+    background: color-mix(in srgb, var(--panel) 50%, transparent);
+  }
+  .hero--pro .hero-cta .btn:hover{ transform: translateY(-2px); border-color: var(--accent); }
+  
+  .hero--pro .hero-footnote{
+    display:flex; gap:22px; margin-top:18px; color:var(--muted);
+    flex-wrap: wrap;
+  }
+  .hero--pro .stat{ display:flex; align-items:baseline; gap:8px; }
+  .hero--pro .stat-num{ font-weight:700; font-size:1.1rem; color:var(--text); }
+  .hero--pro .stat-label{ font-size:.85rem; opacity:.85; }
+  
+  .hero--pro .hero-bg{ position:absolute; inset:0; z-index:0; pointer-events:none; }
+  
+  .scroll-indicator{ position:absolute; left:50%; bottom:16px; transform:translateX(-50%); opacity:.75; }
+  .scroll-indicator span{
+    display:block; width:2px; height:28px; background:var(--border);
+    position:relative; overflow:hidden; border-radius:2px;
+  }
+  .scroll-indicator span::after{
+    content:""; position:absolute; left:0; top:-28px; width:100%; height:28px;
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(122,162,255,.6);
+    animation: scrollDrop 1.6s linear infinite;
+  }
+  @keyframes scrollDrop { 0%{ top:-28px; } 100%{ top:28px; } }
+  
+  /* Keep your base typography sane */
+  body{ background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans'; }
