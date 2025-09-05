@@ -371,7 +371,7 @@ nav.scrolled {
 }
 .hero-image img, .hero-image .hero-photo {
     display: block;
-    width: 400px !important;
+    width: 900px !important;
     height: 400px !important;
     object-fit: cover;
     border-radius: 200px;
