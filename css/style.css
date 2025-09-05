@@ -305,12 +305,6 @@ nav.scrolled {
     position:absolute; inset:0;
     pointer-events:none;
     border-radius: 160px;
-    background:
-      linear-gradient(to bottom right,
-        var(--lg-spec) 0%,
-        rgba(255,255,255,0.35) 12%,
-        rgba(255,255,255,0.12) 28%,
-        rgba(255,255,255,0.00) 45%);
     -webkit-mask: radial-gradient(140% 120% at 0% 0%, #000 0 55%, transparent 60%);
     mask: radial-gradient(140% 120% at 0% 0%, #000 0 55%, transparent 60%);
     opacity:.30;
